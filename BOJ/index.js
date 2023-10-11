@@ -48,7 +48,7 @@
   let input = [];
 
   rl.on("line", function (line) {
-    input = line.push(line);
+    input.push(line);
   }).on("close", function () {
     // 솔루션
   });
