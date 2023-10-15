@@ -7,10 +7,12 @@ const rl = readline.createInterface({
 let input = [];
 
 rl.on("line", function (line) {
-  input.push(line);
+  input = line;
 }).on("close", function () {
-  const s = input[0];
-  const i = Number(input[1]);
+  const str = input.split(" ");
+  let result = str.length;
+  if (str[0] === "") result -= 1;
+  if (str[str.length - 1] === "") result -= 1;
 
-  console.log(s[i - 1]);
+  console.log(result);
 });

@@ -9,8 +9,10 @@ let input = [];
 rl.on("line", function (line) {
   input.push(line);
 }).on("close", function () {
-  const s = input[0];
-  const i = Number(input[1]);
+  const n = Number(input[0]);
+  const data = input[1].split("").map(Number);
+  let result = 0;
 
-  console.log(s[i - 1]);
+  for (let i = 0; i < data.length; i++) result += data[i];
+  console.log(result);
 });

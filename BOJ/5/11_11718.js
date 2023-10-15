@@ -9,8 +9,11 @@ let input = [];
 rl.on("line", function (line) {
   input.push(line);
 }).on("close", function () {
-  const s = input[0];
-  const i = Number(input[1]);
+  for (let i = 0; i < input.length; i++) {
+    let str = input[i];
+    if (str[0] === " ") str.shift();
+    if (str[str.length - 1] === " ") str.pop();
 
-  console.log(s[i - 1]);
+    console.log(str);
+  }
 });
