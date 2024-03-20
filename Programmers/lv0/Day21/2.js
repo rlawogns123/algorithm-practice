@@ -2,9 +2,8 @@
 
 function solution(rank, attendance) {
   var answer = 0;
-  const deleted = rank.filter((_, index) => attendance[index]);
-  deleted.sort((a, b) => a - b);
-  const realPart = deleted.map((item) => rank.findIndex((r) => r === item));
-  answer = realPart[0] * 10000 + realPart[1] * 100 + realPart[2];
+  const data = rank.filter((e, i) => attendance[i]).sort((a, b) => a - b);
+  const [a, b, c] = [rank.indexOf(data[0]), rank.indexOf(data[1]), rank.indexOf(data[2])]
+  answer = 10000 * a + 100 * b + c;
   return answer;
 }
