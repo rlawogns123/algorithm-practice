@@ -1,5 +1,5 @@
 // 나누어 떨어지는 숫자 배열
-// test
+// test2
 
 function solution(arr, divisor) {
   var answer = [];
