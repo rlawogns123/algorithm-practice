@@ -9,6 +9,7 @@ function solution(s) {
     data.pop();
     data.shift();
   }
+
   answer = data.join("");
   return answer;
 }
