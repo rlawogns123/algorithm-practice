@@ -2,10 +2,11 @@
 
 function solution(s) {
   var answer = true;
+  const data = s.split("");
   if (s.length !== 4 && s.length !== 6) {
     answer = false;
   }
-  if (isNaN(s)) {
+  if (data.some((str) => isNaN(str))) {
     answer = false;
   }
   return answer;
